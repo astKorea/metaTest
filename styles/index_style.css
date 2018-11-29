@@ -1,0 +1,355 @@
+@charset "utf-8";
+
+/* ================================================= ���� */
+
+html {
+    -webkit-tap-highlight: rgba(0, 0, 0, 0)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-text-size-adjust: none;
+    text-decoration: none;
+}
+
+body {
+    overflow: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    line-height: 140%;
+    -webkit-overflow-scrolling: touch;
+}
+
+img {
+    border: 0;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    padding: 70px 0 0 0;
+}
+
+
+/* ================================================= ���� */
+
+.wrap {
+    position: relative !important;
+}
+
+
+/* ================================================== ���� */
+
+
+/* header */
+
+.mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.3;
+    z-index: 2;
+}
+
+
+/* == header */
+
+
+/* nav */
+
+.hidden2 {
+    display: none
+}
+
+.toc1 {
+    height: 75px;
+    border-bottom: solid 2px #666666;
+}
+
+.toc1 a {
+    color: #fff;
+    padding-left: 13px;
+    text-transform: uppercase;
+}
+
+.on {
+    color: #00afd5;
+}
+
+.on:before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 30px;
+    width: 18px;
+    height: 1px;
+    background: #00afd5;
+}
+
+
+/* == nav */
+
+
+/* main-body */
+
+.con_wrap {
+    text-align: center;
+}
+
+.cover {
+    position: relative;
+    display: inline-block;
+    clear: both;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.cover_img {
+    position: relative;
+    padding: 17px 0 0;
+    background-color: #e4e5e6;
+    background-size: cover;
+    background-position: left top;
+    box-sizing: border-box;
+}
+
+.cover .main_img {
+    max-width: 960px;
+    margin-bottom: -6px;
+    width: 100%;
+    height: auto;
+}
+
+.cover .model {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    max-width: 900px;
+    width: 95%;
+    text-align: left;
+}
+
+.cover .model p {
+    line-height: 64px;
+    color: #fff;
+}
+
+.cover .model span {
+    display: block;
+    margin-top: 12px;
+    line-height: 26px;
+}
+
+.cover .video_wrap {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    max-width: 900px;
+    width: 95%;
+}
+
+.video_wrap a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 18px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video_wrap a img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.cover_list {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 15px 0 30px;
+    max-width: 960px;
+    width: 100%;
+}
+
+.cover_list li {
+    position: relative;
+    list-style: none;
+    float: left;
+    margin: 0.5% 1% 0.5% 0;
+    width: 19.2%;
+    box-sizing: border-box;
+}
+
+.cover_list li:nth-child(5n) {
+    margin-right: 0;
+}
+
+.cover_list li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px 10px;
+}
+
+.cover_list li a:hover .txt {
+    color: #fff;
+}
+
+.cover_list img {
+    max-width: 110px;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.cover_list .txt {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 90%;
+    line-height: 1.5em;
+    color: #002c5f;
+}
+
+
+/* == main-body */
+
+
+/* responsive */
+
+@media screen and (max-width: 1280px) {
+    .cover .model {
+        top: 15%;
+    }
+    .cover .model p {
+        line-height: 52px;
+    }
+    .cover .model span {
+        margin-top: 8px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .cover .model {
+        top: 22%;
+        padding: 0 8%;
+        width: 84%;
+    }
+    .cover .model p {
+        line-height: 36px;
+    }
+    .cover .model span {
+        margin-top: 8px;
+        line-height: 20px;
+    }
+    .cover_img {
+        padding-right: 5%;
+        padding-left: 5%;
+        width: 100%;
+    }
+    .cover_list {
+        margin: 0 5%;
+        width: 90%;
+    }
+    .cover .video_wrap {
+        padding: 25px 5% 0;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    section {
+        padding-top: 42px;
+    }
+    .cover_list {
+        margin-top: 5px;
+    }
+    .cover_list li {
+        margin: 0.5% 2% 2% 0;
+        width: 49%;
+    }
+    .cover_img {
+        padding-top: 20px;
+    }
+    .cover_list li:nth-child(5n) {
+        margin-right: 2%;
+    }
+    .cover_list li:nth-child(2n) {
+        margin-right: 0;
+    }
+    .cover .video_wrap {
+        padding: 0 8%;
+    }
+}
+
+
+/* @media screen and (max-width: 740px) {
+    .m-img {
+        top: 10% !important;
+        padding: 0 10% !important;
+        width: 80% !important;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    section {
+        padding-top: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .m-img {
+        top: 16% !important;
+        padding: 0 12% !important;
+        width: 76% !important;
+    }
+    .m-img p {
+        line-height: 35px !important;
+    }
+    .m-img span {
+        margin-top: 7px !important;
+        line-height: 19px !important;
+    }
+    .cover_list {
+        margin-top: -45px;
+    }
+    .cover_list li {
+        height: 170px;
+    }
+    .cover_list img {
+        max-width: 90px;
+    }
+    .cover_list .txt {
+    }
+} */
